@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post '/customer_items/new', to: 'customer_items#new'
 
   get '/items', to: 'items#index'
+
+  get '/supermarkets/:supermarket_id', to: 'supermarkets#show'
 end
