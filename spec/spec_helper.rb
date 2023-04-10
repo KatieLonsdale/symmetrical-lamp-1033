@@ -20,6 +20,7 @@ def test_data
   @max_bread = CustomerItem.create!(customer: @customer_2, item: @item_2)
   @lily_grapes = CustomerItem.create!(customer: @customer_5, item: @item_5)
   @lily_cereal = CustomerItem.create!(customer: @customer_5, item: @item_4)
+  @sara_grapes = CustomerItem.create!(customer: @customer_3, item: @item_5)
 end
 
 
