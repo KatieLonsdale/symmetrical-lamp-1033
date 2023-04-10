@@ -1,14 +1,17 @@
-<%= @customer.name %><br>
-<br>
-<ul>
-<% @customer.items.each do |item| %>
-  <li>Name: <%= item.name %>, Price: <%= item.price %>, Supermarket: <%= item.supermarket.name %></li><br>
-<% end %>
+<section id="customer-info">
+  <%= @customer.name %><br>
+  <br><ul>
+  <% @customer.items.each do |item| %>
+    <li>Name: <%= item.name %>, Price: <%= item.price %>, Supermarket: <%= item.supermarket.name %></li><br>
+  <% end %>
+</section>
 
-Add Items by ID
-<%= form_with url: "/customer_items/new", method: :post, local: true do |form|%>
-  <%= form.label :item_id %>
-  <%= form.text_field :item_id %>
-  <%= form.hidden_field :customer_id, value: @customer.id %>
-  <%= form.submit "Add" %>
-<% end %>
+<section id="add-items">
+  Add Items by ID
+  <%= form_with url: "/customer_items/new", method: :post, local: true do |form|%>
+    <%= form.label :item_id %>
+    <%= form.text_field :item_id %>
+    <%= form.hidden_field :customer_id, value: @customer.id %>
+    <%= form.submit "Add" %>
+  <% end %>
+</section>
