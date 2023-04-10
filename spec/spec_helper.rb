@@ -12,7 +12,7 @@ def test_data
   @customer_3 = Customer.create!(name: 'Sara')
   @customer_4 = Customer.create!(name: 'Michael')
   @customer_5 = Customer.create!(name: 'Lily')
-  
+end
 
 
 
