@@ -28,5 +28,27 @@ RSpec.describe 'Customers show page' do
       expect(page).to have_no_content("Price: #{@item_4.price}")
       expect(page).to have_no_content("Supermarket: #{@supermarket_2.name}")
     end
+
+    it "has a form to add an existing item to the customer" do
+      visit "customers/#{@customer_1.id}"
+
+      expect(page).to have_content("Add Items by ID")
+      fill_in :item_id, with: "#{@item_4.id}"
+      expect(page).to have_selector(:link_or_button, 'Add')
+      click_button "Add"
+      expect(current_path).to eq("/customers/#{@customer_1.id}")
+    end
+
+    it "adds the inputted item to the customer's items and displays it on the show page" do
+      visit "customers/#{@customer_1.id}"
+
+      expect(page).to have_no_content("#{@item_4.name}")
+      fill_in :item_id, with: "#{@item_4.id}"
+      click_button "Add"
+
+      expect(page).to have_content("Name: #{@item_4.name}")
+      expect(page).to have_content("Price: #{@item_4.price}")
+      expect(page).to have_content("Supermarket: #{@supermarket_2.name}")
+    end
   end
 end
