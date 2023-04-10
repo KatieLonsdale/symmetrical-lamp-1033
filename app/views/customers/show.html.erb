@@ -1,7 +1,6 @@
 <%= @customer.name %><br>
 <br>
+<ul>
 <% @customer.items.each do |item| %>
-Name: <%= item.name %><br>
-Price: <%= item.price %><br>
-Supermarket: <%= item.supermarket.name %><br>
+  <li>Name: <%= item.name %>, Price: <%= item.price %>, Supermarket: <%= item.supermarket.name %></li><br>
 <% end %>
