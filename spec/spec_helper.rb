@@ -7,6 +7,7 @@ def test_data
   @item_3 = @supermarket_1.items.create!(name: 'milk', price: 5)
   @item_4 = @supermarket_2.items.create!(name: 'cereal', price: 4)
   @item_5 = @supermarket_2.items.create!(name: 'grapes', price: 3)
+  @item_6 = @supermarket_2.items.create!(name: 'salad', price: 7)
   @customer_1 = Customer.create!(name: 'Katie')
   @customer_2 = Customer.create!(name: 'Max')
   @customer_3 = Customer.create!(name: 'Sara')
