@@ -16,7 +16,6 @@ RSpec.describe 'Customers show page' do
 
     it "displays a list of the customer's items and their info" do
       visit "customers/#{@customer_1.id}"
-      save_and_open_page
       expect(page).to have_content("Name: #{@item_1.name}")
       expect(page).to have_content("Price: #{@item_1.price}")
       expect(page).to have_content("Supermarket: #{@supermarket_1.name}")
