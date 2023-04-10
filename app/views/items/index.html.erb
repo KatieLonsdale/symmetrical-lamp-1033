@@ -1,7 +1,9 @@
 <% @items.each do |item| %>
-  <%= "Name: #{item.name}" %><br>
-  <%= "Price: #{item.price}" %><br>
-  <%= "Supermarket: #{item.supermarket_name}" %><br>
-  <%= "Purchased by #{item.customers_purchased_count} Customers" %><br>
+  <section id= "item-<%= item.id %>">
+    <%= "Name: #{item.name}" %><br>
+    <%= "Price: #{item.price}" %><br>
+    <%= "Supermarket: #{item.supermarket_name}" %><br>
+    <%= "Purchased by #{item.customers_purchased_count} Customers" %><br>
+  </section>
   <br>
 <% end %>
