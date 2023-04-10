@@ -12,6 +12,13 @@ def test_data
   @customer_3 = Customer.create!(name: 'Sara')
   @customer_4 = Customer.create!(name: 'Michael')
   @customer_5 = Customer.create!(name: 'Lily')
+  @katie_bananas = CustomerItem.create!(customer: @customer_1, item: @item_1)
+  @katie_bread = CustomerItem.create!(customer: @customer_1, item: @item_2)
+  @katie_milk = CustomerItem.create!(customer: @customer_1, item: @item_3)
+  @max_cereal = CustomerItem.create!(customer: @customer_2, item: @item_4)
+  @max_bread = CustomerItem.create!(customer: @customer_2, item: @item_2)
+  @lily_grapes = CustomerItem.create!(customer: @customer_5, item: @item_5)
+  @lily_cereal = CustomerItem.create!(customer: @customer_5, item: @item_4)
 end
 
 
